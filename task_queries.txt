@@ -6,7 +6,7 @@
 ])
 
 
-> SELECT * FROM tasks WHERE complete = “false”
+> SELECT * FROM tasks WHERE completed = “false”
 
 > db.tasks.updateMany({
 $set: { “completed”: “true”},
