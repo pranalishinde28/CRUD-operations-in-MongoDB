@@ -1,0 +1,15 @@
+> db.tasks.insertMany([
+{ description: “write journal", completed: true },
+{ description: “complete projectwork”, completed: true },
+{ description: “complete thesis”, completed: false },
+{ description: “data analysis”, completed: false },
+])
+
+
+> SELECT * FROM tasks WHERE complete = “false”
+
+> db.tasks.updateMany({
+$set: { “completed”: “true”},
+})
+
+> db.tasks.remove( {“description” : “write  journal”});
